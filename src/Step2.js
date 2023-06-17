@@ -35,7 +35,9 @@ function Step2() {
   });
 
   const onSubmit = (data) => {
-    dispatch(addAdvantage(data.text));
+    if (data.text.length > 0) {
+          dispatch(addAdvantage(data.text));
+    }
     dispatch(addCheckbox(data.checkbox));
     dispatch(addRadio(data.radio));
     dispatch(nextStep());
