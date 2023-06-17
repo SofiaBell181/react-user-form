@@ -25,7 +25,6 @@ function Form() {
     mode: "onChange",
   });
   const onSubmit = (data) => {
-    console.log(data.phoneNumber);
     dispatch(addPhone(data.phoneNumber));
     dispatch(addEmail(data.mail));
     navigate("create");
